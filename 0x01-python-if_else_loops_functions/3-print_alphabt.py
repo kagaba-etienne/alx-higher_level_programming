@@ -2,4 +2,4 @@
 for i in range(97, 123):
     if i in [101, 113]:
         continue
-    print(f"{i:c}", end='')
+    print("{:c}".format(i), end='')
