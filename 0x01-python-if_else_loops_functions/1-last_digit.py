@@ -5,7 +5,7 @@ if number >= 0:
     last_digit = (number % 10)
 else:
     last_digit = 10 - (number % 10)
-decision =""
+decision = ""
 if last_digit == 0:
     decision = "is 0"
 elif last_digit > 5:
