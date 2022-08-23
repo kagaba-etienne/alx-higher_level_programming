@@ -1,0 +1,35 @@
+#include "lists.h"
+
+/**
+ * check_cycle - checks the cycle in singly linked list
+ * @list: the list to check
+ * Return: its either zero or one
+ */
+
+int check_cycle(listint_t *list)
+{
+	int n;
+	int k;
+	listint_t *current;
+	listint_t *temp;
+
+	current = list->next;
+	temp = list;
+	n = 2;
+	while (current->next != NULL)
+	{
+		k = n;
+		while (k > 1)
+		{
+			if (current->next == temp)
+				return (1);
+			k--;
+			temp = temp->next;
+		}
+		n++;
+		temp = list;
+		current = current->next;
+	}
+	return (0);
+}
+
