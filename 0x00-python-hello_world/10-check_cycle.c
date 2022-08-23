@@ -13,13 +13,13 @@ int check_cycle(listint_t *list)
 	listint_t *current;
 	listint_t *temp;
 
-	current = list->next;
+	current = list;
 	temp = list;
 	n = 2;
 	while (current != NULL)
 	{
 		k = n;
-		while (k > 1)
+		while (k > 2)
 		{
 			if (current->next == temp)
 				return (1);
