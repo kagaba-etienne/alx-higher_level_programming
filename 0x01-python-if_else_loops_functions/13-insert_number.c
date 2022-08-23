@@ -1,6 +1,5 @@
 #include "lists.h"
 #include<stdlib.h>
-#include<stddef.h>
 
 /**
  * insert_node - inserting node in singly linked list
@@ -31,7 +30,7 @@ listint_t *insert_node(listint_t **head, int number)
 			if (i == 0)
 			{
 				*head = new;
-				new->next = current
+				new->next = current;
 				return (new);
 			}
 			temp->next = new;
