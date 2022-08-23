@@ -1,4 +1,6 @@
 #include "lists.h"
+#include<stdlib.h>
+#include<stddef.h>
 
 /**
  * insert_node - inserting node in singly linked list
