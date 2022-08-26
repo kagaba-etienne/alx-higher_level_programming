@@ -12,14 +12,13 @@ if __name__ == "__main__":
             exit(1)
         a = int(sys.argv[1])
         b = int(sys.argv[3])
-        match sys.argv[2]:
-            case '+':
-                print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
-            case '/':
-                print("{:d} / {:d} = {}".format(a, b, div(a, b)))
-            case '-':
-                print("{:d} - {:d} = {}".format(a, b, sub(a, b)))
-            case '*':
-                print("{:d} * {:d} = {}".format(a, b, mul(a, b)))
-            case _:
-                pass
+        if sys.argv[2] == '+':
+            print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
+        elif sys.argv[2] == '/':
+            print("{:d} / {:d} = {:d}".format(a, b, div(a, b)))
+        elif sys.argv[2] == '-':
+            print("{:d} - {:d} = {:d}".format(a, b, sub(a, b)))
+        elif sys.argv[2] == '*':
+            print("{:d} * {:d} = {:d}".format(a, b, mul(a, b)))
+        else:
+            pass
