@@ -19,7 +19,7 @@ int is_palindrome(listint_t **head)
 	length = (int)print_listint(*head);
 	if (length % 2 == 0)
 	{
-		for ( i = 0; i <= length / 2; i++)
+		for (i = 0; i <= length / 2; i++)
 		{
 			for (j = 0; j < i + 2 * (length / 2); j++)
 				temp = temp->next;
@@ -30,9 +30,9 @@ int is_palindrome(listint_t **head)
 			}
 			else
 			{
-				return(0);
+				return (0);
 			}
 		}
 	}
-	return(1);
+	return (1);
 }
