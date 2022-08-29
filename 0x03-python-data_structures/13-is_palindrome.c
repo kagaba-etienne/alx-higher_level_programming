@@ -18,27 +18,27 @@ int is_palindrome(listint_t **head)
 	current = *head;
 	temp = *head;
 	length = (int)print_listint(*head);
-	if (1)
+	if (length == 0)
+		return (1);
+	for (i = 0; i <= (length / 2); i++)
 	{
-		for (i = 0; i <= (length / 2); i++)
+		if (length % 2 == 1)
+			finish = (2 * (length / 2)) - i;
+		else
+			finish = (2 * (length / 2)) - i - 1;
+		for (j = 0; j < finish; j++)
+			temp = temp->next;
+		if (temp->n == current->n)
 		{
-			if (length % 2 == 1)
-				finish = (2 * (length / 2)) - i;
-			else
-				finish = (2 * (length / 2)) - i - 1;
-			for (j = 0; j < finish; j++)
-				temp = temp->next;
-			if (temp->n == current->n)
-			{
-				current = current->next;
-				temp = *head;
-				continue;
-			}
-			else
-			{
-				return (0);
-			}
+			current = current->next;
+			temp = *head;
+			continue;
+		}
+		else
+		{
+			return (0);
 		}
 	}
+
 	return (1);
 }
