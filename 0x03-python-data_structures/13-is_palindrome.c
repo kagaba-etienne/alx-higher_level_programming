@@ -18,7 +18,7 @@ int is_palindrome(listint_t **head)
 	current = *head;
 	temp = *head;
 	length = (int)print_listint(*head);
-	if (length == 0)
+	if (length == 0 || length == 1)
 		return (1);
 	for (i = 0; i <= (length / 2); i++)
 	{
